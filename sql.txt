@@ -1,0 +1,17 @@
+-- Crear la base de datos si no existe
+CREATE DATABASE IF NOT EXISTS sistema_login;
+
+-- Usar la base de datos creada
+USE sistema_login;
+
+-- Crear la tabla `usuarios`
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- Establecer el valor inicial de AUTO_INCREMENT
+ALTER TABLE `usuarios`
+  AUTO_INCREMENT = 1;
